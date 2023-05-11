@@ -8,16 +8,20 @@ pipeline {
             }
             post {
                 success {
-                    emailext subject: "Pipeline Status: ${currentBuild.currentResult}",
-                             body: "The Build stage was successful.",
-                             to: "vhh064@gmail.com",
-                             attachmentsPattern: '**/*.log'
+                    emailext (
+                        subject: "Pipeline Status: ${currentBuild.currentResult}",
+                        body: "The Build stage was successful.",
+                        to: "vhh064@gmail.com",
+                        attachmentsPattern: '**/*.log'
+                    )
                 }
                 failure {
-                    emailext subject: "Pipeline Status: ${currentBuild.currentResult}",
-                             body: "The Build stage has failed.",
-                             to: "vhh064@gmail.com",
-                             attachmentsPattern: '**/*.log'
+                    emailext (
+                        subject: "Pipeline Status: ${currentBuild.currentResult}",
+                        body: "The Build stage has failed.",
+                        to: "vhh064@gmail.com",
+                        attachmentsPattern: '**/*.log'
+                    )
                 }
             }
         }
@@ -28,16 +32,20 @@ pipeline {
             }
             post {
                 success {
-                    emailext subject: "Pipeline Status: ${currentBuild.currentResult}",
-                             body: "The Unit and Integration Tests stage was successful.",
-                             to: "vhh064@gmail.com",
-                             attachmentsPattern: '**/*.log'
+                    emailext (
+                        subject: "Pipeline Status: ${currentBuild.currentResult}",
+                        body: "The Unit and Integration Tests stage was successful.",
+                        to: "vhh064@gmail.com",
+                        attachmentsPattern: '**/*.log'
+                    )
                 }
                 failure {
-                    emailext subject: "Pipeline Status: ${currentBuild.currentResult}",
-                             body: "The Unit and Integration Tests stage has failed.",
-                             to: "vhh064@gmail.com",
-                             attachmentsPattern: '**/*.log'
+                    emailext (
+                        subject: "Pipeline Status: ${currentBuild.currentResult}",
+                        body: "The Unit and Integration Tests stage has failed.",
+                        to: "vhh064@gmail.com",
+                        attachmentsPattern: '**/*.log'
+                    )
                 }
             }
         }
@@ -48,16 +56,20 @@ pipeline {
             }
             post {
                 success {
-                    emailext subject: "Pipeline Status: ${currentBuild.currentResult}",
-                             body: "The Code Analysis stage was successful.",
-                             to: "vhh064@gmail.com",
-                             attachmentsPattern: '**/*.log'
+                    emailext (
+                        subject: "Pipeline Status: ${currentBuild.currentResult}",
+                        body: "The Code Analysis stage was successful.",
+                        to: "vhh064@gmail.com",
+                        attachmentsPattern: '**/*.log'
+                    )
                 }
                 failure {
-                    emailext subject: "Pipeline Status: ${currentBuild.currentResult}",
-                             body: "The Code Analysis stage has failed.",
-                             to: "vhh064@gmail.com",
-                             attachmentsPattern: '**/*.log'
+                    emailext (
+                        subject: "Pipeline Status: ${currentBuild.currentResult}",
+                        body: "The Code Analysis stage has failed.",
+                        to: "vhh064@gmail.com",
+                        attachmentsPattern: '**/*.log'
+                    )
                 }
             }
         }
@@ -68,16 +80,20 @@ pipeline {
             }
             post {
                 success {
-                    emailext subject: "Pipeline Status: ${currentBuild.currentResult}",
-                             body: "The Security Scan stage was successful.",
-                             to: "vhh064@gmail.com",
-                             attachmentsPattern: '**/*.log'
+                    emailext (
+                        subject: "Pipeline Status: ${currentBuild.currentResult}",
+                        body: "The Security Scan stage was successful.",
+                        to: "vhh064@gmail.com",
+                        attachmentsPattern: '**/*.log'
+                    )
                 }
                 failure {
-                    emailext subject: "Pipeline Status: ${currentBuild.currentResult}",
-                             body: "The Security Scan stage has failed.",
-                             to: "vhh064@gmail.com",
-                             attachmentsPattern: '**/*.log'
+                    emailext (
+                        subject: "Pipeline Status: ${currentBuild.currentResult}",
+                        body: "The Security Scan stage has failed.",
+                        to: "vhh064@gmail.com",
+                        attachmentsPattern: '**/*.log'
+                    )
                 }
             }
         }
@@ -89,15 +105,20 @@ pipeline {
             }
             post {
                 success {
-                    emailext subject: "Pipeline Status: ${currentBuild.currentResult}",
-                             body: "The Deploy to Staging stage was successful.",
-                             to: "vhh064@gmail.com",
-                             attachmentsPattern}
-                failure {
-                    emailext subject: "Pipeline Status: ${currentBuild.currentResult}",
-                             body: "The Deploy to Staging stage has failed.",
-                             to: "vhh064@gmail.com",
-                             attachmentsPattern: '**/*.log'
+                    emailext (
+                        subject: "Pipeline Status: ${currentBuild.currentResult}",
+                        body: "The Deploy to Staging stage was successful.",
+                        to: "vhh064@gmail.com",
+                        attachmentsPattern: '**/*.log'
+                    )
+                }
+                                failure {
+                    emailext (
+                        subject: "Pipeline Status: ${currentBuild.currentResult}",
+                        body: "The Deploy to Staging stage has failed.",
+                        to: "vhh064@gmail.com",
+                        attachmentsPattern: '**/*.log'
+                    )
                 }
             }
         }
@@ -108,16 +129,20 @@ pipeline {
             }
             post {
                 success {
-                    emailext subject: "Pipeline Status: ${currentBuild.currentResult}",
-                             body: "The Integration Tests on Staging stage was successful.",
-                             to: "vhh064@gmail.com",
-                             attachmentsPattern: '**/*.log'
+                    emailext (
+                        subject: "Pipeline Status: ${currentBuild.currentResult}",
+                        body: "The Integration Tests on Staging stage was successful.",
+                        to: "vhh064@gmail.com",
+                        attachmentsPattern: '**/*.log'
+                    )
                 }
                 failure {
-                    emailext subject: "Pipeline Status: ${currentBuild.currentResult}",
-                             body: "The Integration Tests on Staging stage has failed.",
-                             to: "vhh064@gmail.com",
-                             attachmentsPattern: '**/*.log'
+                    emailext (
+                        subject: "Pipeline Status: ${currentBuild.currentResult}",
+                        body: "The Integration Tests on Staging stage has failed.",
+                        to: "vhh064@gmail.com",
+                        attachmentsPattern: '**/*.log'
+                    )
                 }
             }
         }
@@ -129,19 +154,24 @@ pipeline {
             }
             post {
                 success {
-                    emailext subject: "Pipeline Status: ${currentBuild.currentResult}",
-                             body: "The Deploy to Production stage was successful.",
-                             to: "vhh064@gmail.com",
-                             attachmentsPattern: '**/*.log'
+                    emailext (
+                        subject: "Pipeline Status: ${currentBuild.currentResult}",
+                        body: "The Deploy to Production stage was successful.",
+                        to: "vhh064@gmail.com",
+                        attachmentsPattern: '**/*.log'
+                    )
                 }
                 failure {
-                    emailext subject: "Pipeline Status: ${currentBuild.currentResult}",
-                             body: "The Deploy to Production stage has failed.",
-                             to: "vhh064@gmail.com",
-                             attachmentsPattern: '**/*.log'
+                    emailext (
+                        subject: "Pipeline Status: ${currentBuild.currentResult}",
+                        body: "The Deploy to Production stage has failed.",
+                        to: "vhh064@gmail.com",
+                        attachmentsPattern: '**/*.log'
+                    )
                 }
             }
         }
     }
 }
+
 
