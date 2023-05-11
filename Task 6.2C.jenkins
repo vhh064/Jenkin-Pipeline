@@ -84,15 +84,15 @@ pipeline {
         stage('Deploy to Staging') {
             steps {
                 // Use AWS CLI or other deployment methods to deploy to staging server
-                sh 'aws ec2 deploy-to-staging'
+                // Replace with your actual AWS CLI commands or deployment scripts
+                sh 'echo "Deploying to staging..."'
             }
             post {
                 success {
                     emailext subject: "Pipeline Status: ${currentBuild.currentResult}",
                              body: "The Deploy to Staging stage was successful.",
                              to: "vhh064@gmail.com",
-                             attachmentsPattern: '**/*.log'
-                }
+                             attachmentsPattern}
                 failure {
                     emailext subject: "Pipeline Status: ${currentBuild.currentResult}",
                              body: "The Deploy to Staging stage has failed.",
@@ -104,7 +104,7 @@ pipeline {
         stage('Integration Tests on Staging') {
             steps {
                 // Execute integration tests on staging environment using Selenium or other tools
-                                sh 'mvn integration-test'
+                sh 'mvn integration-test'
             }
             post {
                 success {
@@ -124,7 +124,8 @@ pipeline {
         stage('Deploy to Production') {
             steps {
                 // Use AWS CLI or other deployment methods to deploy to production server
-                sh 'aws ec2 deploy-to-production'
+                // Replace with your actual AWS CLI commands or deployment scripts
+                sh 'echo "Deploying to production..."'
             }
             post {
                 success {
@@ -143,3 +144,4 @@ pipeline {
         }
     }
 }
+
