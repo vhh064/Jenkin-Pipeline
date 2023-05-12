@@ -11,6 +11,7 @@ pipeline {
                     mail to: 'vhh064@gmail.com',
                     subject: 'Build status mail',
                     body: 'Build successful'
+                    password: 'qvgu snwi tbls yekm'
                 }
             }
         }
